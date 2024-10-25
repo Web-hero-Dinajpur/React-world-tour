@@ -1,9 +1,10 @@
-
-
-const Countey = () => {
+import './style.css'
+const Countey = ({country}) => {
+    const {name, flags} = country;
     return (
-        <div>
-            
+        <div className='design'>
+            <p>name :{name?.common}</p>
+            <img src={flags.png} alt="" />
         </div>
     );
 };
