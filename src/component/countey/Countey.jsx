@@ -1,8 +1,8 @@
 import './style.css'
-const Countey = ({country, handleVisited}) => {
+const Countey = ({country, handleVisited, hanglaFlagsAdd}) => {
     const {name, flags, population, area, cca3} = country;
 
-    console.log(handleVisited)
+    
     return (
         <div className='design'>
             <p>name :{name?.common}</p>
@@ -11,6 +11,7 @@ const Countey = ({country, handleVisited}) => {
             <p>{area}</p>
             <p>Code: {cca3}</p>
             <button onClick={()=>handleVisited(country)}>Visited</button>
+            <button onClick={()=>hanglaFlagsAdd(country)}>Flags Added</button>
         </div>
     );
 };
